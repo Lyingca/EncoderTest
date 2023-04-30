@@ -115,9 +115,10 @@ int main(void)
     //读取编码器当前的计数值，因为是四倍频，所以除以4才是真实的脉冲数
     volatile uint32_t CaptureNumber = __HAL_TIM_GET_COUNTER(&htim3) / 4;
     //获取电机的转动方向，0为正、1为反
-    bool b = __HAL_TIM_IS_TIM_COUNTING_DOWN(&htim3);
-    printf("%d\r\n",CaptureNumber);
-    printf("%d\r\n",b);
+    bool direction = __HAL_TIM_IS_TIM_COUNTING_DOWN(&htim3);
+      printf("{position}%d\n",CaptureNumber);
+      printf("{direction}%d\n",direction);
+      printf("{level}%d,%d\n", HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_6),HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_7));
     HAL_Delay(100);
     /* USER CODE BEGIN 3 */
   }
