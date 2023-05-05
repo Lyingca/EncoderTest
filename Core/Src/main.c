@@ -20,6 +20,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include "main.h"
+#include "adc.h"
 #include "tim.h"
 #include "usart.h"
 #include "gpio.h"
@@ -36,7 +37,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+uint16_t ADC_Value = 0, ADC_Volt=0;
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -101,10 +102,12 @@ int main(void)
   MX_GPIO_Init();
   MX_USART1_UART_Init();
   MX_TIM3_Init();
+  MX_ADC1_Init();
   /* USER CODE BEGIN 2 */
   //使能编码器模式
-  HAL_TIM_Encoder_Start(&htim3,TIM_CHANNEL_1);
-  HAL_TIM_Encoder_Start(&htim3,TIM_CHANNEL_2);
+//  HAL_TIM_Encoder_Start(&htim3,TIM_CHANNEL_1);
+//  HAL_TIM_Encoder_Start(&htim3,TIM_CHANNEL_2);
+    HAL_ADC_Start_IT(&hadc1);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -113,13 +116,13 @@ int main(void)
   {
     /* USER CODE END WHILE */
     //读取编码器当前的计数值，因为是四倍频，所以除以4才是真实的脉冲数
-    volatile uint32_t CaptureNumber = __HAL_TIM_GET_COUNTER(&htim3) / 4;
+//    volatile uint32_t CaptureNumber = __HAL_TIM_GET_COUNTER(&htim3) / 4;
     //获取电机的转动方向，0为正、1为反
-    bool direction = __HAL_TIM_IS_TIM_COUNTING_DOWN(&htim3);
-      printf("{position}%d\n",CaptureNumber);
-      printf("{direction}%d\n",direction);
-      printf("{level}%d,%d\n", HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_6),HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_7));
-    HAL_Delay(100);
+//    bool direction = __HAL_TIM_IS_TIM_COUNTING_DOWN(&htim3);
+//      printf("{position}%d\n",CaptureNumber);
+//      printf("{direction}%d\n",direction);
+//      printf("{level}%d,%d\n", HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_6),HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_7));
+//    HAL_Delay(100);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -166,7 +169,17 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
+{
+    if (hadc == &hadc1)
+    {
+        ADC_Value = HAL_ADC_GetValue(hadc);
+        ADC_Volt = ADC_Value * 330 / 4096;
+        printf("{value}%d\n",ADC_Value);
+        printf("{volt}%d\n",ADC_Volt);
+    }
+    HAL_ADC_Start_IT(hadc);
+}
 /* USER CODE END 4 */
 
 /**
