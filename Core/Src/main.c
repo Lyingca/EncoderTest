@@ -21,6 +21,7 @@
 #include <stdbool.h>
 #include "main.h"
 #include "adc.h"
+#include "dma.h"
 #include "tim.h"
 #include "usart.h"
 #include "gpio.h"
@@ -37,7 +38,8 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-uint16_t ADC_Value = 0, ADC_Volt=0;
+uint16_t ADC_Volt=0;
+uint16_t ADC_Value[2] = {0};
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -100,14 +102,15 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_USART1_UART_Init();
   MX_TIM3_Init();
   MX_ADC1_Init();
   /* USER CODE BEGIN 2 */
   //使能编码器模式
-//  HAL_TIM_Encoder_Start(&htim3,TIM_CHANNEL_1);
-//  HAL_TIM_Encoder_Start(&htim3,TIM_CHANNEL_2);
-    HAL_ADC_Start_IT(&hadc1);
+  HAL_TIM_Encoder_Start(&htim3,TIM_CHANNEL_1);
+  HAL_TIM_Encoder_Start(&htim3,TIM_CHANNEL_2);
+    //HAL_ADC_Start_DMA(hadc1,)
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -169,17 +172,7 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
-{
-    if (hadc == &hadc1)
-    {
-        ADC_Value = HAL_ADC_GetValue(hadc);
-        ADC_Volt = ADC_Value * 330 / 4096;
-        printf("{value}%d\n",ADC_Value);
-        printf("{volt}%d\n",ADC_Volt);
-    }
-    HAL_ADC_Start_IT(hadc);
-}
+
 /* USER CODE END 4 */
 
 /**

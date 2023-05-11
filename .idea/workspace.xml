@@ -20,42 +20,37 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a7cef14c-fa91-4064-9433-b84a63ae264c" name="Changes" comment="edit project IC1Filter = 6">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Inc/adc.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Src/adc.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_adc.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_adc_ex.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_adc.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_adc.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_adc_ex.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_adc.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/EncoderTest.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/EncoderTest.elf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/EncoderTest.hex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/EncoderTest.map" afterDir="false" />
+    <list default="true" id="a7cef14c-fa91-4064-9433-b84a63ae264c" name="Changes" comment="ADC">
+      <change afterPath="$PROJECT_DIR$/Core/Inc/dma.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/Inc/encoder.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/Src/dma.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/Src/encoder.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-169c9d924010e1f3dc25.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-9e70a86b4751166f53c5.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-4b8dc8f0246767d22717.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-05-05T01-57-47-0972.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-EncoderTest.elf-Debug-c547998f3cde6711d7e2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.mxproject" beforeDir="false" afterPath="$PROJECT_DIR$/.mxproject" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/stm32g0xx_hal_conf.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/stm32g0xx_hal_conf.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Inc/stm32g0xx_it.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/stm32g0xx_it.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/adc.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/adc.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/stm32g0xx_it.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/stm32g0xx_it.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EncoderTest.ioc" beforeDir="false" afterPath="$PROJECT_DIR$/EncoderTest.ioc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-169c9d924010e1f3dc25.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-9e70a86b4751166f53c5.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-010237edf62e8d6c10a9.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-EncoderTest.elf-Debug-5cb1eee24479e131fba1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.25.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.25.2/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.25.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.25.2/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/EncoderTest.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/EncoderTest.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/EncoderTest.elf" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/EncoderTest.elf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/EncoderTest.hex" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/EncoderTest.hex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/EncoderTest.map" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/EncoderTest.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
     </list>
@@ -106,11 +101,6 @@
     </key>
   </component>
   <component name="RunManager" selected="OpenOCD Download &amp; Run.EncoderTest">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="EncoderTest.elf" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="EncoderTest" TARGET_NAME="EncoderTest.elf" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="EncoderTest" RUN_TARGET_NAME="EncoderTest.elf">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -141,7 +131,9 @@
       <workItem from="1682769892455" duration="4141000" />
       <workItem from="1682828214519" duration="8085000" />
       <workItem from="1683084919411" duration="595000" />
-      <workItem from="1683243733440" duration="1600000" />
+      <workItem from="1683243733440" duration="7229000" />
+      <workItem from="1683677530129" duration="1705000" />
+      <workItem from="1683764155084" duration="1902000" />
     </task>
     <task id="LOCAL-00001" summary="修改乱码">
       <created>1682750881801</created>
@@ -164,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682837896725</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="ADC">
+      <created>1683245707450</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1683245707450</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,6 +190,7 @@
     <MESSAGE value="修改乱码" />
     <MESSAGE value="create project" />
     <MESSAGE value="edit project IC1Filter = 6" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit project IC1Filter = 6" />
+    <MESSAGE value="ADC" />
+    <option name="LAST_COMMIT_MESSAGE" value="ADC" />
   </component>
 </project>
