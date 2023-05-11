@@ -110,7 +110,9 @@ int main(void)
   //使能编码器模式
   HAL_TIM_Encoder_Start(&htim3,TIM_CHANNEL_1);
   HAL_TIM_Encoder_Start(&htim3,TIM_CHANNEL_2);
-    //HAL_ADC_Start_DMA(hadc1,)
+  //编码器计数器复位
+  __HAL_TIM_SET_COUNTER(&htim3,65000);
+  //HAL_ADC_Start_DMA(hadc1,)
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -126,6 +128,17 @@ int main(void)
 //      printf("{direction}%d\n",direction);
 //      printf("{level}%d,%d\n", HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_6),HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_7));
 //    HAL_Delay(100);
+
+
+      //反转引脚
+      HAL_GPIO_TogglePin(GPIOC,GPIO_PIN_6);
+      HAL_Delay(50);
+      HAL_GPIO_TogglePin(GPIOC,GPIO_PIN_7);
+      HAL_Delay(50);
+      HAL_Delay(1000);
+      uint32_t CaptureNumber = __HAL_TIM_GET_COUNTER(&htim3);
+      printf("{position}%d\n",CaptureNumber);
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
